@@ -1,0 +1,110 @@
+html{
+	height: 100%;
+	width; 100%;
+}
+
+body{
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0);
+}
+
+#halfwindow{
+	height: 100%;
+	width: 50%;
+	position: absolute;
+	right: 0;
+	background-color: rgba(255, 255, 255, 0);
+	z-index: 0;
+}
+
+#leftwindow{
+	height: 300%;
+	width: 250%;
+	position: absolute;
+	left: -430%;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0);
+	z-index: 0;
+}
+
+#character{
+	width: 40%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 10;
+}
+
+#upperside{
+	height: 50%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	background-color: rgba(255, 0, 0, 0);
+	z-index: 40;
+}
+
+#lowerside{
+	height: 50%;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(0, 255, 0, 0);
+	z-index: 40;
+}
+
+#eyes{
+	height: 	100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	background-image: url("character/eyes_3.png"), url("character/eyes_2.png"), url("character/eyes_1.png"), url("character/eyes_other.png");
+	background-size: cover, 0 0, 0 0, 0 0;
+	z-index: 20;
+}
+
+#halfwindow:hover #eyes{
+	animation: blinks 100ms steps(3) forwards;
+}
+
+#leftwindow:hover ~ #eyes{
+	animation: blinks 100ms steps(3) forwards;
+}
+
+@keyframes blinks{
+	0% {background-size: 0 0, 0 0, cover, 0 0; }
+	50% {background-size: 0 0, cover, 0 0, 0 0; }
+	100% {background-size: cover, 0 0, 0 0, 0 0; }
+}
+
+#upperside:hover ~ #eyes{
+	animation: halfeyes 50ms steps(2) forwards;
+}
+
+@keyframes halfeyes{
+	0% {background-size: 0 0, 0 0, cover, 0 0; }
+	100%{background-size: 0 0, cover, 0 0, 0 0; }
+}
+
+#lowerside:hover ~ #eyes{
+	animation: smile 50ms steps(2) forwards;
+}
+
+@keyframes smile{
+	0% {background-size: 0 0, cover,  0 0, 0 0; }
+	100%{background-size: 0 0, 0 0, 0 0, cover; }
+}
+
+#mouth{
+	height: 	100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	background-image: url("character/mouth_1.png");
+	background-size: 100% auto;
+	z-index: 30;
+}
