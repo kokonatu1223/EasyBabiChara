@@ -1,5 +1,7 @@
 # EasyBabiChara
 
+![demo](https://github.com/kokonatu1223/share/blob/main/pftp4-kwwrg.gif)
+
 ## これは？
 デスクトップにバーチャル受肉体なんかを置けるElectronアプリです。ちょっと動きのあるデスクトップマスコットとしても、画面共有だけで配信したいときにも。
 
