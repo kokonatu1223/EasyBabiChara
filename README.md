@@ -17,16 +17,16 @@ ElectronをインストールしてEasyBabiChara/EasyBabiCharaディレクトリ
 - マイク閾値調整（mouth.jsの数値を直接変更）
 
 ```javascript
-                 var changeMouth = function(){
-                    let freq = Math.floor(getFrequency());
-                    if(freq<8){ //閉じ口->中口の閾値
-                    	mouth.style.backgroundImage = 'url(character/mouth_1.png)';
-                    }else if(freq < 20){ //中口->大口の閾値
-                    	mouth.style.backgroundImage = 'url(character/mouth_2.png)';
-                    }else{
-                    	mouth.style.backgroundImage = 'url(character/mouth_3.png)';
-                    }
-                }
+var changeMouth = function(){
+  let freq = Math.floor(getFrequency());
+  if(freq<8){ //閉じ口->中口の閾値
+    mouth.style.backgroundImage = 'url(character/mouth_1.png)';
+  }else if(freq < 20){ //中口->大口の閾値
+    mouth.style.backgroundImage = 'url(character/mouth_2.png)';
+  }else{
+    mouth.style.backgroundImage = 'url(character/mouth_3.png)';
+  }
+}
 ```
 
 
